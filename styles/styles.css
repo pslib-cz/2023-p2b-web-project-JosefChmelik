@@ -1,0 +1,252 @@
+/* Add a black background color to the top navigation */
+html{
+  font-family: "Reddit Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body{
+  background-color: #E6E6E6;
+    margin: 0;
+    margin-top: 2em; /*v em*/
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #575757;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .navbar a {
+    float: left;
+    position: relative;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+.navbar a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 2.7em;
+    right: -2.7em;
+    height: 0.5em;
+    border-top: 1px solid black;
+    transform: rotate(90deg);
+    z-index: 5;
+  }
+  
+  /* Change the color of links on hover */
+  .navbar a:hover {
+    color: #ddd;
+  }
+  
+  /* Add a color to the active/current link */
+  .navbar a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  .page-content{
+    background-image: linear-gradient(rgba(230, 230, 230, 1), rgba(197, 197, 197, 1));
+    width: 100%;
+    height: 100%;
+  }
+  .products{
+    margin-bottom: 2em;
+    padding-left: 2em;
+  }
+
+  .products__carousel{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 5em 10fr);
+  }
+  .product{
+    align-self: center;
+    justify-self: center;
+    width: 70%;
+    background-color: white;
+    border-radius: 13px;
+    margin: .5em;
+    height: fit-content; /*jen zatim*/
+    border-radius: 13px;
+  }
+
+  .product--short{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+  }
+
+
+  #product__image img{
+    border-radius: 13px;
+    min-width: 250px;
+    max-width: 330px;
+  }
+
+  .product__name{
+    align-self: left;
+  }
+
+  .product__button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #486e60;
+    color: #000000;
+    width: 15em;
+    height: 4em;
+    border-radius: 13px;
+    text-decoration: none;
+  }
+
+  .product__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.4em;
+    padding-top: 0;
+    padding-bottom: 0.7em;
+    min-width: 250px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+  .product--wide{
+    display: none;
+  }
+
+  .footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 1em;
+  }
+
+  .footer__top{
+    position: relative;
+  }
+
+  .footer__top::after {
+    position: absolute;
+    content: "";
+    height: 1.3px;
+    background-color: #5a5a5a;
+    width: 90vw; /* Adjust this value to make the line shorter or longer */
+    left: calc((100vw - 90vw) / 2 - 50vw); /* This will center the line relative to the viewport */
+    bottom: 0;
+}
+
+
+
+.footer__top-left:first-child{
+  position: relative;
+}
+
+.footer__top-left:first-child::after{
+  position: absolute;
+  content: "";
+  height: 2px;
+  background-color: #5a5a5a;
+  border-radius: 100px;
+  width: 5vw; /* Adjust this value to make the line shorter or longer */
+  left: 0; /* This will center the line relative to the viewport */
+  bottom: 2em;
+}
+
+  .about-us{
+    display: flex;
+    flex-direction: column;
+    background-color: #C5C5C5;
+    border-radius: 0;
+    padding: 1em;
+  }
+
+  .about-us__title{
+    align-self: center;
+  }
+
+  .about-us p{
+    text-align: center;
+  }
+
+  @media (min-width: 1100px) {
+    body{
+      background-color: #ffffff;
+    }
+
+    .page-content{
+      background-color: #7c7c7c;
+      margin-left: 4em;
+      margin-right: 4em;
+      padding: 2em 2em 0 2em;
+      width: auto;
+      max-width: 1300px;
+      align-self: center;
+      height: 100%;
+    }
+}
+
+@media (min-width: 740px) {
+  .page-content{
+    background-color: #7c7c7c;
+    padding: 2em 2em 0 2em;
+    width: auto;
+    height: 100%;
+  }
+  .products__carousel{
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .product{
+    align-self:auto;
+    justify-self: auto;
+    width: 100%;
+  }
+
+  .products__title{
+    display: none;
+  }
+
+  .product--wide{
+    grid-column: span 2;
+      display: flex;
+    }
+
+  .product--wide{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* This will make the containers the same height */
+  }
+
+  .about-us{
+    border-radius: 13px;
+  }
+
+  .product--wide  #product__image > img{
+
+  }
+}
