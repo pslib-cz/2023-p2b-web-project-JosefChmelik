@@ -209,6 +209,7 @@ body{
   }
 
   .contacts__carousel p{
+    margin: 0;
     width: 12em;
     position: relative;
     text-align: center;
@@ -217,12 +218,24 @@ body{
     justify-content: space-around;
   }
 
-  .contacts__carousel p::before{ /*more dopici*/
-    content: "";
-    width: 100px;
+  .contacts__icon{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .contacts__icon{
+  .contacts__icon::after {
+    content: "";
+    position: absolute;
+    right: -40px; /* Adjust this value to position the line correctly */
+    height: 90%; /* Adjust this value to match the height of the icon */
+    border-right: 2.5px solid #7B7B7B; /* Adjust color and thickness as needed */
+    width: 0;
+    top: 5%; /* Center the line vertically */
+}
+
+  .contacts__hours{
     display: flex;
     flex-direction: column;
     justify-content: center;
