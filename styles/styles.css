@@ -117,8 +117,6 @@ body{
   }
 
   .product__content{
-    display: flex;
-    flex-direction: column;
     align-items: center;
     padding: 2.4em;
     padding-top: 0;
@@ -231,16 +229,23 @@ body{
     display: none;
   }
 
-  .product--wide{
-    grid-column: span 2;
-      display: flex;
-    }
+  .product__content{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+  }
 
   .product--wide{
-    display: flex;
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     flex-direction: column;
     align-items: stretch; /* This will make the containers the same height */
     height: 35em;
+  }
+
+  .product--wide .product__content{
+    padding: 0;
   }
 
   .about-us{
