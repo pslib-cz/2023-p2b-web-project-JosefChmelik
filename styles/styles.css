@@ -241,6 +241,12 @@ body{
     justify-content: center;
   }
 
+  .subscription{
+    text-align: center;
+    min-height: 300px;
+    background-color: #B3B3B3;
+  }
+
   @media (min-width: 1100px) {
     body{
       background-color: #E6E6E6;;
