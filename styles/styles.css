@@ -14,6 +14,16 @@ body{
     flex-direction: column;
 }
 
+.banner{
+  height: 500px;
+  background-image: url(../img/tech_support.png);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 .navbar {
     list-style-type: none;
     display: flex;
@@ -118,6 +128,7 @@ body{
 
   .product__content{
     align-items: center;
+    justify-content: center;
     padding: 2.4em;
     padding-top: 0;
     padding-bottom: 0.7em;
@@ -167,8 +178,8 @@ body{
   height: 2px;
   background-color: #5a5a5a;
   border-radius: 100px;
-  width: 5vw; /* Adjust this value to make the line shorter or longer */
-  left: 0; /* This will center the line relative to the viewport */
+  width: 11vw;
+  left: calc(50% - 5.5em);
   bottom: 2em;
 }
 
@@ -188,9 +199,38 @@ body{
     text-align: center;
   }
 
+  .contacts__carousel{
+    margin: 1em;
+    background-color: #CBCBCB;
+    border-radius: 13px;
+    height: 10em;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .contacts__carousel p{
+    width: 12em;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .contacts__carousel p::before{ /*more dopici*/
+    content: "";
+    width: 100px;
+  }
+
+  .contacts__icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   @media (min-width: 1100px) {
     body{
-      background-color: #ffffff;
+      background-color: #E6E6E6;;
     }
 
     .page-content{
@@ -203,7 +243,7 @@ body{
       align-self: center;
       height: 100%;
     }
-}
+} 
 
 @media (min-width: 740px) {
   .page-content{
@@ -221,6 +261,7 @@ body{
 
   .product{
     align-self:auto;
+    align-items: center;
     justify-self: auto;
     width: 100%;
   }
@@ -231,8 +272,9 @@ body{
 
   .product__content{
     display: flex;
+    align-items: center;
     flex-direction: column;
-    align-content: space-between;
+    justify-content: space-around;
   }
 
   .product--wide{
@@ -240,11 +282,13 @@ body{
     display: grid;
     grid-template-columns: 1fr 2fr;
     flex-direction: column;
-    align-items: stretch; /* This will make the containers the same height */
     height: 35em;
   }
 
   .product--wide .product__content{
+    padding: 0;
+  }
+  .product--wide .product__content h1{
     padding: 0;
   }
 
@@ -254,5 +298,32 @@ body{
 
   .product--wide  #product__image > img{
 
+  }
+
+  .footer{
+    min-height: 150px;
+  }
+
+  .footer__top{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .footer__top-left{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer__top-right{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contact-page-content {
+    padding: 0;
+    width: 100%;
+    height: 100%;
   }
 }
