@@ -42,6 +42,7 @@ body{
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    align-items: center;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -53,35 +54,44 @@ body{
   .navbar a {
     float: left;
     position: relative;
-    color: #f2f2f2;
+    color: var(--quinary-color);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
   }
 
-.navbar a::after {
+  .navbar li:nth-of-type(1) a{
+    font-size: xx-large;
+  }
+
+.navbar li:nth-of-type(1) a::after{
     content: "";
     position: absolute;
-    bottom: 0;
-    left: 2.7em;
-    right: -2.7em;
-    height: 0.5em;
+    left: 4.7em;
+    bottom: 31px;
     border-top: 5px solid var(--senary-color);
     border-radius: 13px;
     transform: rotate(90deg);
     z-index: 5;
+    width: 17px;
+  }
+
+  .navbar li:nth-of-type(2) a::after{
+    content: "";
+    position: absolute;
+    left: 5.7em;
+    bottom: 21px;
+    border-top: 5px solid var(--senary-color);
+    border-radius: 13px;
+    transform: rotate(90deg);
+    z-index: 5;
+    width: 17px;
   }
   
   /* Change the color of links on hover */
   .navbar a:hover {
     color: #ddd;
-  }
-  
-  /* Add a color to the active/current link */
-  .navbar a.active {
-    background-color: var(--tertiary-color);
-    color: white;
   }
 
   .ratio3to2{
@@ -151,6 +161,34 @@ body{
 
   .product #product__image img{
     width: 80%;
+  }
+
+  .subscription__form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 500px;
+  }
+
+  .subscription__form::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-top: 2px solid var(--nonary-color);
+    border-radius: 13px;
+    max-width: 300px;
+    bottom: -570px;
+  }
+
+  .form__button{
+    text-decoration: none;
+    color: var(--nonary-color);
+  }
+
+  .form{
+    color: var(--nonary-color);
+    background: transparent;
+    border: none;
   }
 
   .product__button{
@@ -291,7 +329,10 @@ body{
   }
 
   .subscription{
-    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     min-height: 300px;
     background-color: var(--octonary-color);
@@ -342,6 +383,19 @@ body{
     align-items: center;
   }
 
+  .product--short .product__button{
+    width: 10em;
+  }
+
+@media (min-width: 485px){
+  .subscription__form::after {
+    bottom: -540px;
+  }
+
+  .product--short .product__button{
+    width: 15em;
+  }
+}
 
 @media (min-width: 740px) {
 
@@ -495,11 +549,9 @@ body{
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
+    padding: 2em;
   }
 
-  .product--wide .product__content{
-    padding: 0;
-  }
   .product--wide .product__content h1{
     padding: 0;
   }
