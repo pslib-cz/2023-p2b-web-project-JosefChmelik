@@ -59,10 +59,6 @@ body{
     font-size: 17px;
   }
 
-.page-content .products{
-  justify-content: center;
-}
-
 .navbar a:after {
     content: "";
     position: absolute;
@@ -109,7 +105,7 @@ body{
     width: 70%;
     background-color: white;
     border-radius: 13px;
-    margin: .5em;
+    margin: 0;
     height: fit-content; /*jen zatim*/
     border-radius: 13px;
   }
@@ -147,7 +143,7 @@ body{
     align-items: center;
     justify-content: center;
     background-color: var(--quaternary-color);
-    color: var(--quinary-color);
+    color: var(--senary-color);
     width: 15em;
     height: 4em;
     border-radius: 13px;
@@ -286,8 +282,9 @@ body{
   }
 
   .page-content .products{
-    overflow-x: scroll;
-  }
+    overflow-x: hidden;
+    justify-content: center;
+  } 
 
   .products__item{
     display: flex;
