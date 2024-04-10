@@ -196,6 +196,11 @@ body{
     padding: 1em;
   }
 
+  .footer__bottom{
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
   .footer__top{
     position: relative;
   }
@@ -205,8 +210,8 @@ body{
     content: "";
     height: 1.3px;
     background-color: #5a5a5a;
-    width: 90vw; /* Adjust this value to make the line shorter or longer */
-    left: calc((100vw - 90vw) / 2 - 50vw); /* This will center the line relative to the viewport */
+    width: 150%; /* Adjust this value to make the line shorter or longer */
+    left: -25%; /* This will center the line relative to the viewport */
     bottom: 0;
 }
 
@@ -216,15 +221,15 @@ body{
   position: relative;
 }
 
-.footer__top-left:first-child::after{
+.footer__top-left:first-child::after {
   position: absolute;
   content: "";
   height: 2px;
   background-color: #5a5a5a;
   border-radius: 100px;
-  width: 11vw;
-  left: calc(50% - 5.5em);
-  bottom: 2em;
+  width: 3vw;
+  left: 44.5%;
+  bottom: 1.5em;
 }
 
   .about-us{
@@ -378,6 +383,19 @@ body{
     flex-direction: row;
     justify-content: space-around;
   }
+
+  .footer__top::after {
+    width: 90vw; /* Adjust this value to make the line shorter or longer */
+    left: 5vw; /* This will center the line relative to the viewport */
+    bottom: 0;
+}
+
+.footer__top-left:first-child::after {
+  width: 2vw;
+  left: calc(50% - 5.5em);
+  bottom: 2.2em;
+  rotate: calc(90deg);
+}
 
   .footer__top-left{
     display: flex;
