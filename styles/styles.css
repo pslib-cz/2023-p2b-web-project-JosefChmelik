@@ -89,7 +89,7 @@ body{
   }
   .products{
     margin-bottom: 2em;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .products__carousel{
