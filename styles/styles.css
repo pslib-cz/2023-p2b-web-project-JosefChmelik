@@ -20,6 +20,7 @@ html{
 }
 
 body{
+  position: relative;
   background-color: var(--primary-color);
     margin: 0;
     margin-top: 2em; /*v em*/
@@ -190,7 +191,7 @@ body{
     border-top: 2px solid var(--nonary-color);
     border-radius: 13px;
     max-width: 300px;
-    bottom: -570px;
+    bottom: 19.5em;
   }
 
   .form__button{
@@ -202,6 +203,10 @@ body{
     color: var(--nonary-color);
     background: transparent;
     border: none;
+  }
+
+  .form:focus{
+    outline: none;
   }
 
   .product__button{
@@ -402,7 +407,7 @@ body{
 
 @media (min-width: 485px){
   .subscription__form::after {
-    bottom: -540px;
+    bottom: 21em;
   }
 
   .product--short .product__button{
@@ -411,13 +416,16 @@ body{
 }
 
 @media (min-width: 740px) {
-
   .contacts__carousel{
     background-color: transparent;
   }
 
   .contacts__icon::after{
     display: none;
+  }
+
+  .subscription__form::after {
+    bottom: 16em;
   }
 
   .contacts__carousel::after {
