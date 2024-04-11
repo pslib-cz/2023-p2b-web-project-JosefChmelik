@@ -30,7 +30,7 @@ body{
 
 .banner{
   height: 500px;
-  background-image: url(../img/tech_support.png);
+  background-image: url(../img/tech_support.jpg);
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -94,6 +94,19 @@ body{
     color: #ddd;
   }
 
+  .contacts__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 12em;
+  }
+
+  .contacts__info a{
+    text-decoration: none;
+    color: var(--quinary-color);
+    text-align: center;
+  }
+
   .ratio3to2{
     margin: .5em;
   }
@@ -144,12 +157,12 @@ body{
     height: 35em;
   }
 
-  #product__image{
+  .product__image{
     text-align: center;
     margin: 1em;
   }
 
-  #product__image img{
+  .product__image img{
     border-radius: 13px;
     min-width: 220px;
     max-width: 330px;
@@ -159,7 +172,7 @@ body{
     align-self: left;
   }
 
-  .product #product__image img{
+  .product .product__image img{
     width: 80%;
   }
 
@@ -368,7 +381,7 @@ body{
     margin: 1em;
   }
 
-  .products__item #product__image > img{
+  .products__item .product__image > img{
     width: 80%;
   }
 
