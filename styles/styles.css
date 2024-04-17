@@ -243,7 +243,6 @@ body{
     align-items: center;
     text-align: center;
     justify-content: space-around;
-    width: 100%;
     background-color: rgb(0, 0, 0);
     color: white;
     padding: 1em;
@@ -404,6 +403,21 @@ body{
 
   .product--short .product__button{
     width: 10em;
+  }
+  .footer__link{
+    margin: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--senary-color);
+  }
+
+  .footer__item{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /*pomoc*/
   }
 
 @media (min-width: 485px){
