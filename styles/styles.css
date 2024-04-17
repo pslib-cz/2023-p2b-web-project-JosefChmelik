@@ -169,9 +169,6 @@ body{
     max-width: 330px;
   }
 
-  .product__name{
-    align-self: left;
-  }
 
   .product .product__image img{
     width: 80%;
@@ -246,7 +243,7 @@ body{
     align-items: center;
     text-align: center;
     justify-content: space-around;
-    width: 100vw;
+    width: 100%;
     background-color: rgb(0, 0, 0);
     color: white;
     padding: 1em;
@@ -257,7 +254,7 @@ body{
     margin-bottom: 1em;
   }
 
-  .footer__top{
+  .footer__top{ 
     position: relative;
   }
 
@@ -284,7 +281,7 @@ body{
   background-color: #5a5a5a;
   border-radius: 100px;
   width: 3vw;
-  left: 44.5%;
+  left: calc(50% - 1.5vw);
   bottom: 1.5em;
 }
 
@@ -296,12 +293,16 @@ body{
     padding: 1em;
   }
 
+  .about-us__text{
+    padding: 1em;
+  }
+
   .about-us__title{
-    align-self: center;
+    padding-left: .5em;
   }
 
   .about-us p{
-    text-align: center;
+    text-align: left;
   }
 
   .contacts__carousel{
@@ -461,7 +462,7 @@ body{
 
   .footer__top::after {
     width: 90vw; /* Adjust this value to make the line shorter or longer */
-    left: 5vw; /* This will center the line relative to the viewport */
+    left: 2.5%; /* This will center the line relative to the viewport */
     bottom: 0;
 }
 
@@ -486,6 +487,15 @@ body{
     margin: 1em;
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: var(--senary-color);
+  }
+
+  .footer__item{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /*pomoc*/
   }
 
   .footer__company-name, .footer__company-slogan{
