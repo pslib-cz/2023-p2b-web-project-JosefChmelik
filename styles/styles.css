@@ -185,7 +185,7 @@ body{
     border-top: 2px solid var(--nonary-color);
     border-radius: 13px;
     max-width: 300px;
-    bottom: 22.5em;
+    bottom: 24.5em;
     width: 100%;
   }
 
@@ -432,9 +432,23 @@ body{
     justify-content: center;    /*pomoc*/
   }
 
+  .footer nav{
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer__icon{
+    margin: .5em;
+  }
+
+  .footer__bottom a{
+    text-decoration: none;
+    color: aliceblue;
+  }
+
 @media (min-width: 485px){
   .subscription__form::after {
-    bottom: 24.5em; 
+    bottom: 25.5em; 
   }
 
   .product--short .product__button{
