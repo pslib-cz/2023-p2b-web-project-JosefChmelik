@@ -186,6 +186,7 @@ body{
     border-radius: 13px;
     max-width: 300px;
     bottom: 22.5em;
+    width: 100%;
   }
 
   .form__button{
@@ -419,7 +420,7 @@ body{
 
 @media (min-width: 485px){
   .subscription__form::after {
-    bottom: 24.5em;
+    bottom: 24.5em; 
   }
 
   .product--short .product__button{
