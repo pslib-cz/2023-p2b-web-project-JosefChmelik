@@ -296,6 +296,8 @@ body{
 
   .about-us__title{
     padding-left: .5em;
+    font-size: xx-large;
+    font-weight: 700;
   }
 
   .about-us p{
@@ -354,6 +356,11 @@ body{
     background-color: var(--octonary-color);
   }
 
+  .subscription p:first-child{
+    font-size: xx-large;
+    font-weight: 700;
+  }
+
   .products{
     display: flex;
     overflow-x: scroll;
@@ -380,8 +387,15 @@ body{
     margin: 2em;
   }
 
+  .page-header p:first-child{
+    font-size: xx-large;
+    font-weight: 600;
+  }
+
   .product-category{
     margin: 1em;
+    font-size: xx-large;
+    font-weight: 700;
   }
 
   .products__item .product__image > img{
@@ -438,7 +452,7 @@ body{
   }
 
   .subscription__form::after {
-    bottom: 16em;
+    bottom: 15em;
   }
 
   .contacts__carousel::after {
