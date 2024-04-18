@@ -39,6 +39,16 @@ body{
   align-items: center;
   text-align: center;
 }
+
+.banner p{
+  text-shadow: rgb(255, 255, 255) 0px 0px 10px;
+}
+
+.banner p:first-of-type{
+  font-size: xx-large;
+  font-weight: 700;
+}
+
 .navbar {
     list-style-type: none;
     display: flex;
